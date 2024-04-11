@@ -8,6 +8,10 @@ const router = createBrowserRouter([
     path: '/',
     element: <Home />,
   },
+  {
+    path: '/search/:keyword',
+    element: <Home />
+  }
 ]);
 
 function App() {

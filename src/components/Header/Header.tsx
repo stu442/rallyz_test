@@ -1,11 +1,10 @@
-import { useSetRecoilState } from "recoil";
 import { Button, Form, Input } from "./style";
-import { searchState } from "../../atoms/searchState";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
-    const setSearchData = useSetRecoilState(searchState);
     const [inputValue, setInputValue] = useState<string>('');
+    const navigate = useNavigate();
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setInputValue(event.target.value);
@@ -13,7 +12,7 @@ export default function Header() {
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        setSearchData(inputValue);
+        navigate(`/search/${inputValue}`);
     }
 
     return (
