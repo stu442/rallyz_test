@@ -1,12 +1,7 @@
 import { atom } from "recoil";
-import { Products } from "../types/productType";
+import { Product } from "../types/productType";
 
-export const productState = atom<Products>({
+export const productState = atom<Product[]>({
     key: "productState",
-    default: {
-        products: [],
-        total: 0,
-        skip: 0,
-        limit: 0
-    },
+    default: [],
 });
