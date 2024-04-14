@@ -13,6 +13,8 @@ export default function Header() {
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         navigate(`/search/${inputValue}`);
+        // TODO : 다른 방법 생각해보기
+        window.location.reload();
     }
 
     return (

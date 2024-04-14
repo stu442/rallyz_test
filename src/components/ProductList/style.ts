@@ -11,3 +11,13 @@ export const ProdcutWrapper = styled.section`
     grid-gap: 20px;
     gap: 20px;
 `
+export const MoreBtn = styled.button`
+    font-size: 16px;
+    padding: 20px 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    &:hover {
+        color: blue;
+    }
+`

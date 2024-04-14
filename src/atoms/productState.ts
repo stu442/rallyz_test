@@ -5,3 +5,13 @@ export const productState = atom<Product[]>({
     key: "productState",
     default: [],
 });
+
+export const totalProductsState = atom<number>({
+    key: "totalProductsState",
+    default: 0,
+})
+
+export const pageState = atom<number>({
+    key: "pageState",
+    default: 0,
+})

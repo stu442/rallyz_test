@@ -1,5 +1,14 @@
 import styled from "styled-components";
 
+export const BrandText = styled.span`
+    color: #4a4949;
+    font-weight: bold;
+`
+export const Title = styled.span`
+    font-weight: normal;
+    color: #000;
+`
+
 export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
@@ -8,6 +17,12 @@ export const Wrapper = styled.div`
     width: 80%;
     height: 80%;
     cursor: pointer;
+
+    &:hover {
+        ${BrandText}, ${Title} {
+            color: blue;
+        }
+    }
 `
 
 export const TitleWrapper = styled.div`
@@ -21,16 +36,6 @@ export const ProductImage = styled.img`
     height: 100%;
     object-fit: contain;
     margin-bottom: 20px
-`
-
-export const BrandText = styled.span`
-    color: #4a4949;
-    font-weight: bold;
-`
-
-export const Title = styled.span`
-    font-weight: normal;
-    color: #000;
 `
 
 export const Price = styled.p`

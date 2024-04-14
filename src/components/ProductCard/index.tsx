@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { BrandText, Price, ProductImage, Title, TitleWrapper, Wrapper } from "./style";
 
 interface ProductCardProps {
@@ -15,8 +16,10 @@ export default function ProductCard({
     title,
     price
 }: ProductCardProps) {
+    const navigate = useNavigate();
+
     return (
-        <Wrapper>
+        <Wrapper onClick={() => navigate(`/product/${id}`)}>
             <ProductImage alt={`product ${id}`} src={image}></ProductImage>
             <TitleWrapper>
                 <BrandText>{brand}, <Title>{title}</Title></BrandText>
